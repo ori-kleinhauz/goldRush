@@ -1,41 +1,17 @@
+const GoldRush = require(`./GoldRush`)
 
-const board = new GoldRush()
+const board = new GoldRush(5, 5)
 board.loadBoard()
-//board.checkIfFree(3,0)
 board.placeCoins()
-board.print() //the print method should be defined inside of Matrix
-//prints
-// 1       .       .       .       .
-// .       .       .       .       .
-// .       .       .       .       .
-// .       .       .       .       .
-// .       .       .       .       2
+board.print()
 
-//  board.movePlayer(1, "down") //this method should be defined inside of GoldRush
-//  board.print()
-//prints
-// .       .       .       .       .
-// 1       .       .       .       .
-// .       .       .       .       .
-// .       .       .       .       .
-// .       .       .       .       2
-
-//  board.movePlayer(2, "left")
-//  board.print()
-//prints
-// .       .       .       .       .
-// 1       .       .       .       .
-// .       .       .       .       .
-// .       .       .       .       .
-// .       .       .       2       .
-p = 1
-dirs = ["up", "down", "left", "right"]
+let player = 1
+const dirs = ["up", "down", "left", "right"]
 while(true){
     dir = dirs[Math.floor(Math.random() * dirs.length)]
-    board.movePlayer(p, dir)
-    console.log(`player ${p} moves ${dir}`)
+    board.movePlayer(player, dir)
+    console.log(`player ${player} moves ${dir}`)
     board.print()
-    p = (p == 1) ? 2 : 1
+    player = (player == 1) ? 2 : 1
     if(board.checkVictory()){break}
 }
-
