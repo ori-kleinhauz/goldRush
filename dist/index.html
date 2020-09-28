@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Gold Rush</title>
 </head>
 <body>
-    <div id="container"></div>
+    
+        <script id="scores-template" type="text/x-handlebars-template">
+            <div id="bear">Bear: </div>
+            <div id="bear-score">{{firstPlayer}}</div>
+            <div id="sheep">Sheep: </div>
+            <div id="sheep-score">{{secondPlayer}}</div>
+        </script>
+        <div id="scores"></div>
+        <div id="main-container"></div>
 
     <script src="../node_modules/handlebars/dist/handlebars.js"></script>
     <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../node_modules/lodash/"></script>
+    <script src="../node_modules/requirejs/require.js"></script>
     <script src="../Matrix.js"></script>
     <script src="../GoldRush.js"></script>
     <script src="../Renderer.js"></script>
