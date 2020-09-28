@@ -26,6 +26,7 @@ class Renderer {
                 } else if (i == player2.coords.y && j == player2.coords.x) {
                     newHTML = `<div id="box"><img src="player22.PNG" alt="player2"></div>`
                 } else if (coins.find(elem => elem.x == j && elem.y == i)) {
+                     //newHTML = `<img src="cub.gif" alt="cub" width="60" height="60">`
                     newHTML = `<div id="box"><iframe src="https://giphy.com/embed/WT9wi81vtEhqt17SE4" width="80" height="80" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Cryply-money-cryptocurrency-coin-WT9wi81vtEhqt17SE4"></a></p></div>`
                 }
 

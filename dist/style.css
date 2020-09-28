@@ -7,7 +7,7 @@
     margin-left: 500px;
     align-items: center;
     justify-content: center;
-    background: #393C47;
+    background: #243135;
     border: 5px solid silver;
 }
 
@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: center;
   border: 2px solid #8785a2;
-
+  background-color :#243135;
 }
 
 #box:hover {
